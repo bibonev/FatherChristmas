@@ -1,0 +1,40 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import com.sun.javafx.scene.control.skin.TableHeaderRow?>
+<?import javafx.scene.control.TableView?>
+<VBox fx:controller="controllers.Controller"
+      xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:id="container">
+    <children>
+        <HBox>
+            <children>
+                <Text text="${controller.connectionMessage}" />
+                <Button fx:id="makeConnection" onAction="#makeConnection">Connect</Button>
+                <Button fx:id="dropConnection" onAction="#dropConnection">Drop Tables</Button>
+            </children>
+        </HBox>
+        <TextArea fx:id="textArea" maxWidth="600" maxHeight="40"/>
+
+        <HBox>
+        <TextField fx:id="childId"/>
+        <Button fx:id="selectChild" onAction="#selectChildById" >Select Child</Button>
+        </HBox>
+
+        <HBox>
+        <TextField fx:id="helperId"/>
+        <Button fx:id="selectHelper" onAction="#selectHelperById">Select Helper</Button>
+        </HBox>
+
+        <TableView fx:id="tableView"/>
+    </children>
+</VBox>
+
